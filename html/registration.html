@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../css/registeration.css">
+    <script src="../jquery-3.5.1.js"></script>
+    <script src="../js/registeration.js"></script>
+    <link rel="stylesheet" href="../bootstrap-4.5.3-dist/bootstrap-4.5.3-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+            <div class="blog">
+                <h1>.BlogIt</h1>
+            </div>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <form class="form-horizontal reg" role="form" id="registerationForm">
+            <h2>Registration</h2>
+            <br>
+            <div class="form-group hrFrm">
+                <label for="#name" class="col-sm-3 control-label">Name*</label>
+                <div class="col-sm-9">
+                    <input type="text" id="name" placeholder="John Kennedy" class="form-control" autofocus>
+                </div>
+            </div>
+
+            <div class="form-group hrFrm">
+                <label for="mail" class="col-sm-3 control-label">Email* </label>
+                <div class="col-sm-9">
+                    <input type="email" id="mymail" placeholder="john@gmail.com" class="form-control" name="email"
+                        required>
+                        <span id="mailCheck"></span>
+                </div>
+            </div>
+            <div class="form-group hrFrm">
+                <label for="password" class="col-sm-3 control-label">Password*</label>
+                <div class="col-sm-9">
+                    <input type="password" id="password" placeholder="Password" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group hrFrm">
+                <label for="cPassword" class="col-sm-3 control-label">Confirm Password*</label>
+                <div class="col-sm-9">
+                    <input type="password" id="cPassword" placeholder="Password" class="form-control" required>
+                    <span id="cp"></span>
+                </div>
+            </div>
+            <div class="form-group hrFrm">
+                <label class="control-label col-sm-3">Gender</label>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" id="femaleRadio" value="Female">Female
+                            </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" id="maleRadio" value="Male">Male
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-9 col-sm-offset-3">
+                    <span class="help-block">*Required fields</span>
+                </div>
+            </div>
+            <button type="submit" id="sub" class="btn btn-primary btn-block">Register</button>
+        </form>
+
+        <!-- <form action="../html/sucess.html" method="post" class="form-horizontal login" id="loginForm">
+            <div class="form-group">
+                <label for="loginMail" class="col-sm-3 control-label">Email* </label>
+                <div class="col-sm-9">
+                    <input type="email" id="loginMail" placeholder="john@gmail.com" class="form-control" name="email"
+                        required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword" class="col-sm-3 control-label">Password*</label>
+                <div class="col-sm-9">
+                    <input type="password" id="loginPassword" placeholder="Password" class="form-control" required>
+                </div>
+            </div>
+               <div class="col-sm-9">
+                   <span id="validLogin"></span>
+               </div>
+            <div class="col-sm-9">
+                <input type="submit" class="btn btn-primary btn-block" value="Login">
+            </div>
+            <br>
+            <div>
+                Not Registered? <a id="singUp" href="registration.html">Create Account</a>
+            </div>
+
+        </form> -->
+    </div>
+</body>
+
+</html>

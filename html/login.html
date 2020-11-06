@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/registeration.css">
+    <script src="../jquery-3.5.1.js"></script>
+    <script src="../js/login.js"></script>
+
+</head>
+<body>
+    <form action="../html/sucess.html" method="post" class="form-horizontal login" id="loginForm">
+        <div class="form-group">
+            <label for="loginMail" class="col-sm-3 control-label">Email* </label>
+            <div class="col-sm-9">
+                <input type="email" id="loginMail" placeholder="john@gmail.com" class="form-control" name="email"
+                    required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="loginPassword" class="col-sm-3 control-label">Password*</label>
+            <div class="col-sm-9">
+                <input type="password" id="loginPassword" placeholder="Password" class="form-control" required>
+            </div>
+        </div>
+           <div class="col-sm-9">
+               <span id="validLogin"></span>
+           </div>
+        <div class="col-sm-9">
+            <input type="submit" class="btn btn-primary btn-block" value="Login">
+        </div>
+        <br>
+        <div>
+            Not Registered? <a id="singUp" href="registration.html">Create Account</a>
+        </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+@import '../bootstrap-4.5.3-dist/bootstrap-4.5.3-dist/css/bootstrap.css';
+
+body {
+    background: url('https://www.strikingly.com/content/static/01860dce6859ba49fd670be737ab09c9/6f021/2019-12-13-background-image-for-website.jpg') fixed;
+   background-size: cover;
+}
+.reg{
+    display: none;
+}
+.login{
+    display: none;
+}
+
+
+form {
+   max-width: 650px;
+   padding: 15px;
+   margin: 0 auto;
+   border-radius: 0.3em;
+   background-color: grey;
+   align-self: center;
+   margin-top: 120px;
+   opacity: 0.8;
+ font-family: Arial, Helvetica, sans-serif;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+}
+h2{
+    text-align: center;
+}
+
+/* for inline input box */
+
+.hrFrm{
+    display: flex;
+}
+
+.blog{
+    /* background-color: yellow; */
+    width: 300px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(70, 28, 28);
+}
+
+ @media (max-width:576px){
+     .hrFrm{
+         flex-direction: column;
+     }
+}
