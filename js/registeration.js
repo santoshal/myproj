@@ -73,13 +73,15 @@ $(document).ready(() => {
 
   //registeration form
   $("#registerationForm").submit((a) => {
+    console.log("gjghghfkghfkj");
+
     a.preventDefault();  //to prevent auto submission of form
     var name = $("#name").val();
    
       var mail = $("#mymail").val();
     var pass = $("#password").val();
     var gend = $('input[name="gender"]:checked').val();
-    // console.log(name + " " + mail);
+    console.log(name + " " + mail);
 
 
     $.ajax({
@@ -100,68 +102,68 @@ $(document).ready(() => {
     })
   });
 
-//  //show reg form
-//  $(".reg").click((a) => {
-//    console.log("hiee");
+ //show reg form
+ $(".reg").click((a) => {
+  //  console.log("hiee");
    
-//   $('.reg').show();
-//   $('.login').hide();
-//   a.preventDefault();
-// })
+  $('.myReg').show();
+  $('.myLog').hide();
+  a.preventDefault();
+})
 
-//   //show login form
-//   $(".log").click((a) => {
-//     $('.reg').hide();
-//     $('.login').show();
-//     a.preventDefault();
-//   })
+  //show login form
+  $(".log").click((a) => {
+    $('.myReg').hide();
+    $('.myLog').show();
+    a.preventDefault();
+  })
 
-//   //Not Registered? Create Account
-//   $("#singUp").click((a) => {
-//     $('.login').hide();
-//     $('.reg').show();
+  //Not Registered? Create Account
+  $("#singUp").click((a) => {
+    $('.myLog').hide();
+    $('.myReg').show();
 
-//     a.preventDefault();
-//   });
+    a.preventDefault();
+  });
 
 
-  // //login Form
-  // $("#loginForm").submit((a) => {
-  //   a.preventDefault();  //to prevent auto submission of form
-  //   var mail = $("#loginMail").val();
-  //   var pass = $("#loginPassword").val();
-  //   console.log(mail + " " + pass);
+  //login Form
+  $("#loginForm").submit((a) => {
+    a.preventDefault();  //to prevent auto submission of form
+    var mail = $("#loginMail").val();
+    var pass = $("#loginPassword").val();
+    console.log(mail + " " + pass);
 
-  //    $.getJSON("http://localhost:3000/profile", (data) => {
-  //     for (var i = 0; i < data.length; i++) {
+     $.getJSON("http://localhost:3000/profile", (data) => {
+      for (var i = 0; i < data.length; i++) {
        
 
-  //       if (data[i].email == mail && data[i].password == pass) {
+        if (data[i].email == mail && data[i].password == pass) {
     
-  //         sessionStorage.setItem("user", JSON.stringify(data[i]));
+          sessionStorage.setItem("user", JSON.stringify(data[i]));
           
           
-  //         window.open("sucess.html");
+          window.open("sucess.html");
 
-  //         var a=JSON.parse(sessionStorage.getItem("user"));
-  //         console.log("hello"+ a.name);
+          var a=JSON.parse(sessionStorage.getItem("user"));
+          console.log("hello"+ a.name);
   
 
-  //         break;
+          break;
          
-  //       }
+        }
 
-  //       if (data[i].email != mail && data[i].password != pass) {
-  //         $("#validLogin").html("please check your email and password").css('color', 'red');
-  //       }
-  //     }
+        if (data[i].email != mail && data[i].password != pass) {
+          $("#validLogin").html("please check your email and password").css('color', 'red');
+        }
+      }
 
 
-  //   })
+    })
 
             
  
-  // })
+  })
 
 
 })
